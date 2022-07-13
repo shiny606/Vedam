@@ -1,0 +1,50 @@
+<ion-header >
+
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-img class="backImg" src="assets/back.png"></ion-img>
+      </ion-button>
+    </ion-buttons>
+    <h2>Courses</h2>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="gridFull">
+    <div style="margin-left: 5px;margin-right: 5px;">
+    <ion-card style="border-radius: 10px;background-color: #707070;">  
+      <img class="verse"  src={{termImage}}>
+   </ion-card>
+   <h3>{{termName}}</h3>
+   <!-- <h4>10 Topics</h4> -->
+   <span *ngFor="let termItem of termData;let i = index">
+   <ion-card *ngIf="lockStatus=='locked'" style="border-radius: 10px;background-color: #707070;" (click)="courseTermsLocked(termItem.topics,termItem.id)">  
+    <img class="topics"  src={{termItem.topic_image}}>
+    <div class="myOverlay">
+      <div class="ellipsis">{{termItem.topics}}</div>
+     </div> 
+     <div class="myOverlays">
+     
+     </div> 
+ </ion-card>
+ <ion-card *ngIf="lockStatus=='unlocked'" style="border-radius: 10px;background-color: #707070;" (click)="courseTerms(termItem.topics,termItem.id)">  
+  <img class="topics"  src={{termItem.topic_image}}>
+  <div class="myOverlay">
+    <div class="ellipsis">{{termItem.topics}}</div>
+   </div> 
+   <!-- <div class="myOverlays">
+   
+   </div>  -->
+</ion-card>
+</span>
+ <!-- <ion-card style="border-radius: 10px;background-color: #707070;" (click)="courseTermsLock()">  
+  <img class="topics"  src="assets/dummy_rest.jpg">
+  <div class="myOverlay">
+    <div class="ellipsis">Topic 2</div>
+   </div> 
+   <div class="myOverlays">
+  </div> 
+</ion-card> -->
+  </div>
+</ion-grid>
+</ion-content>

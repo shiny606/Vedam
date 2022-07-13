@@ -1,0 +1,111 @@
+<ion-header >
+  <ion-toolbar color="medium">
+    <div class="circleImg" slot="end" shape="circle" (click)="buttonClicked()">
+      <ion-label style="font-size: 16px;color: #FFFFFF;text-align: center;
+      font-family:Arboria-Bold !important;margin-top: 4px;position: absolute;">j</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <div style="margin-left: 5px;margin-right: 5px;">
+  <ion-row >
+    <ion-col size="10" style="text-align: center;">
+  <h2 *ngIf="verseData.length">Verse of the Day</h2>
+</ion-col>
+<ion-col size="2" style="text-align: right;" *ngIf="verseData.length || factsData.length">
+  <img class="langChange" src="assets/langChange.png" (click)="langChange(click)" />
+  </ion-col>
+</ion-row>
+<ion-card style="border-radius: 10px;background-color: #707070;" *ngFor="let verseImg of verseData;let i = index">  
+  <img class="verse" src={{verseImg.verse_img}}/>
+  <div class="myOverlay1">
+    <ion-row style="margin-left: 10px;margin-right: 10px;">
+      <ion-col size="2" style="text-align: left;">
+        <img class="downld" src="assets/share.png" (click)="shareImag(verseImg.verse_img)"/>
+  </ion-col>
+  <ion-col size="6" style="text-align: left;">
+    <img class="downld" src="assets/download.png" (click)="DownloadImage(verseImg.verse_img,verseImg.image)"/>
+    </ion-col>
+    <ion-col size="4" style="text-align: right;">
+      <img class="downld" (click)="bookMarkClick('Verses',verseImg.image)" src="assets/bookmarknew.png"/>
+      </ion-col>
+  </ion-row>
+   </div>
+</ion-card>  
+ <!-- <ion-card style="border-radius: 10px;background-color: #707070;">  
+  <img class="verse" src="assets/verse.png"/>
+  <div class="myOverlay1">
+    <ion-row style="margin-left: 10px;margin-right: 10px;">
+      <ion-col size="2" style="text-align: left;">
+        <img class="downld" src="assets/share.png"/>
+  </ion-col>
+  <ion-col size="6" style="text-align: left;">
+    <img class="downld" src="assets/download.png"/>
+    </ion-col>
+    <ion-col size="4" style="text-align: right;">
+      <img class="downld" src="assets/bookmarknew.png"/>
+      </ion-col>
+  </ion-row>
+   </div>
+</ion-card>  -->
+  <h2 *ngIf="factsData.length">Daily Facts</h2>
+  <ion-card style="border-radius: 10px;background-color: #707070;" *ngFor="let factsImg of factsData;let i = index">  
+  <img class="verse" src={{factsImg.facts_image}}/>
+  <div class="myOverlay1">
+    <ion-row style="margin-left: 10px;margin-right: 10px;">
+      <ion-col size="2" style="text-align: left;">
+        <img class="downld" src="assets/share.png" (click)="shareImag(factsImg.facts_image)"/>
+  </ion-col>
+  <ion-col size="6" style="text-align: left;">
+    <img class="downld" src="assets/download.png"/>
+    </ion-col>
+    <ion-col size="4" style="text-align: right;">
+      <img class="downld" (click)="bookMarkClick('Facts',factsImg.image)" src="assets/bookmarknew.png"/>
+      </ion-col>
+  </ion-row>
+   </div>
+  </ion-card>
+  <!-- <ion-card style="border-radius: 10px;background-color: #707070;">  
+    <img class="verse" src="assets/dailyFacts.png"/>
+    <div class="myOverlay1">
+      <ion-row style="margin-left: 10px;margin-right: 10px;">
+        <ion-col size="2" style="text-align: left;">
+          <img class="downld" src="assets/share.png"/>
+    </ion-col>
+    <ion-col size="6" style="text-align: left;">
+      <img class="downld" src="assets/download.png"/>
+      </ion-col>
+      <ion-col size="4" style="text-align: right;">
+        <img class="downld" src="assets/bookmarknew.png"/>
+        </ion-col>
+    </ion-row>
+     </div>
+    </ion-card> -->
+  <h2>Explore</h2>
+  <ion-row style="margin-left: 5px;" > 
+   <ion-card class="exImage" *ngFor="let exploreImg of exploreData;let i = index" >
+      <ion-col size="4" (click)="ScienceClick(exploreImg.explore_category)">
+      <div style="display: flex">
+      <ion-avatar  class="user_img" >
+      <ion-img src={{exploreImg.image}}></ion-img>
+      </ion-avatar>
+      </div>
+      <div style="display: flex">
+      <ion-label class="textxx">{{exploreImg.explore_category}}</ion-label>
+      </div>
+      </ion-col>
+    </ion-card>
+  </ion-row>
+<h2>Courses</h2>
+ <ion-slides [options]="slideOptions" pager="true" class="thumnail-slider">             
+  <ion-slide *ngFor="let courseImg of courseeData;let i = index">
+    <ion-card (click)="courseClick(courseImg.grade)">
+        <img src={{courseImg.image}}> 
+        <div class="myOverlay">
+          <div class="ellipsis">{{courseImg.title}}<br> {{courseImg.grade}}</div>
+         </div>                   
+    </ion-card>
+  </ion-slide>
+</ion-slides> 
+</div>
+</ion-content>

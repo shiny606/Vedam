@@ -1,0 +1,117 @@
+
+.ion-color-tick {
+  --ion-color-base: #27AC6E !important;
+  --ion-color-base-rgb: var(--ion-color-medium-rgb, 146, 148, 156) !important;
+  --ion-color-contrast: var(--ion-color-medium-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-medium-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: #27AC6E !important;
+  --ion-color-tint: #27AC6E !important;
+}
+.ion-color-medium{
+  --ion-color-base: #FEE4C3 !important;
+  --ion-color-base-rgb: var(--ion-color-medium-rgb, 146, 148, 156) !important;
+  --ion-color-contrast: var(--ion-color-medium-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-medium-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: #FEE4C3 !important;
+  --ion-color-tint: #FEE4C3 !important;
+}
+h2 {
+  color: #F89315;
+  text-align: left;
+  font-size: 18px;
+  margin-left: 5px;
+  font-family:Arboria-Bold !important; 
+}
+.backImg{
+  width: 19px;
+  height: 16px;
+  margin-top: 5px;
+}
+.gridFull{
+  background-color: #F0F0F0;
+  width: 100%;
+  height: 100%;
+}
+
+.segment_div {
+  display: flex;
+  height: 51px;
+  width: 100%;
+  background-color: #F89315;
+  font-family:Arboria-Bold !important; 
+  ion-label {
+      color: #f5debe;
+      width: 100%;
+      height: 51px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 15px;
+      font-family:Arboria-Bold !important; 
+  }
+  .active {
+      color: #FFFFFF;
+      font-family:Arboria-Bold !important; 
+      ion-label {
+        color: #FFFFFF;
+        width: 100%;
+        height: 51px;
+        margin-top: 15px;
+        text-align: center;
+        font-size: 14px;
+        font-family:Arboria-Bold !important; 
+    }
+  }
+}
+.labBook{
+  color: #212121;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-left: 17px;
+  font-family:Arboria-Bold !important; 
+}
+
+
+.circleImg {
+  background-color: transparent !important;
+  border-radius: 50px;
+  margin: auto;
+  width: 30px;
+  color: #212121;
+  height: 30px;
+  
+}
+
+.circleTxt{
+  font-size: 20px;
+  color: #212121;
+  font-family:Arboria-Bold !important;
+  margin: auto;
+  text-align: center;
+  
+}
+
+.actives{
+  background-color: #FFFFFF !important;
+  border-color: #00000029 !important;
+  border: 15px !important;
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px -3px #00000029 !important;
+  width: 25px;
+  height: 25px;
+  
+  }
+
+  .actives3{
+    background-color: #FFFFFF !important;
+    border-color: #00000029 !important;
+    border: 15px !important;
+    box-shadow: 0px 0px 40px -3px #00000029 !important;
+    border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    }
+
+
+
+

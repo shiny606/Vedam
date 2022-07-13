@@ -1,0 +1,43 @@
+<ion-header >
+  <ion-toolbar color="medium">
+    <ion-row style="margin-left: 10px;">
+   
+      <!-- <ion-item style="border-radius: 10px;width: 100px;height: 30px;margin-left: 20px;" >
+        <ion-select  [(ngModel)]="nameValue" style="width: 100%;text-align: center;margin-top: -20px;font-size: 14px;font-family:Arboria-Bold !important;" (ngModelChange)="kmChange(nameValue)">
+          <ion-select-option  *ngFor="let item of details;let i = index" value="{{item}}"  >{{item}}</ion-select-option>
+        </ion-select>
+      </ion-item>    
+    -->
+    <ion-col size="4">
+    <h1 (click)="bookNameClick()">{{BookName}}</h1>
+  </ion-col>
+  <ion-col size="4">
+      <ion-item style="border-radius: 10px;width: 120px;height: 30px;margin-left: 10px;" >
+        <ion-select   [(ngModel)]="versionsValue" style="width: 100%;margin-top: -20px;font-size: 14px;font-family:Arboria-Bold !important;" (ngModelChange)="versionChange(versionsValue)">
+          <ion-select-option *ngFor="let items of bibleversionData;let i = index"  value="{{items.bible_type}}"  >{{items.bible_type}}</ion-select-option>
+        </ion-select>
+      </ion-item>  
+      
+      
+      <!-- <ion-item style="border-radius: 10px;width: 120px;height: 30px;margin-left: 10px;" >
+        <ion-select  [(ngModel)]="versionsValue" style="width: 100%;margin-top: -20px;font-size: 14px;font-family:Arboria-Bold !important;" (ngModelChange)="kmChange(versionsValue)">
+          <ion-select-option  *ngFor="let items of versions;let i = index" value="{{items}}"  >{{items}}</ion-select-option>
+        </ion-select>
+      </ion-item> -->
+    </ion-col>
+  </ion-row>
+    <div class="circleImg" slot="end" shape="circle" (click)="buttonClicked()">
+      <ion-label style="font-size: 16px;color: #FFFFFF;text-align: center;
+      font-family:Arboria-Bold !important;margin-top: 4px;position: absolute;">j</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+  <ion-grid class="gridFull" >
+    <span *ngFor="let bibleContent of bibleContentData;let i = index">
+    <h2 [innerHTML]="bibleContent.verses"></h2>
+  </span>
+</ion-grid>
+</ion-content>

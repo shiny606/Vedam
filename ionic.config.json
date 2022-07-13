@@ -1,0 +1,7 @@
+{
+  "name": "vedam",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

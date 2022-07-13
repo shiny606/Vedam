@@ -1,0 +1,68 @@
+
+.ion-color-medium {
+   
+  --ion-color-base: #FEE4C3 !important;
+  --ion-color-base-rgb: var(--ion-color-medium-rgb, 146, 148, 156) !important;
+  --ion-color-contrast: var(--ion-color-medium-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-medium-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: #FEE4C3 !important;
+  --ion-color-tint: #FEE4C3 !important;
+}
+
+
+
+h2 {
+  color: #F89315;
+  text-align: left;
+  font-size: 18px;
+  margin-left: 5px;
+  font-family:Arboria-Bold !important; 
+}
+h3 {
+  color: #000000;
+  text-align: left;
+  font-size: 16px;
+  margin-left: 5px;
+  font-family:Arboria-Bold !important; 
+}
+h1 {
+  color: #212121;
+  text-align: left;
+  font-size: 18px;
+  margin-left: 5px;
+  font-family:Arboria-Bold !important; 
+}
+.backImg{
+  width: 19px;
+  height: 16px;
+  margin-top: 5px;
+}
+.gridFull{
+  background-color: #F5F5F5;
+  width: 100%;
+  height: 100%;
+}
+
+.verse{
+  width: 100%;
+  height: 286px;
+ 
+}
+
+
+.imageAcc{
+  width: 13px;
+  height: 16px;
+  text-align: right;
+  margin: auto;
+  margin-top: 12px;
+}
+
+h5{
+  font-family:Arboria-Bold !important;
+   font-size: 14px;
+   color: #212121;
+}
+
+
+

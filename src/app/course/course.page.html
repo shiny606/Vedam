@@ -1,0 +1,28 @@
+<ion-header >
+
+  <ion-toolbar color="medium">
+    <div class="circleImg" slot="end" shape="circle" (click)="buttonClicked()">
+      <ion-label style="font-size: 16px;color: #FFFFFF;text-align: center;
+      font-family:Arboria-Bold !important;margin-top: 4px;position: absolute;">j</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="gridFull">
+    <ion-card style="border-radius: 10px;background-color: #707070;">  
+      <img class="verse"  src="assets/dummy_rest.jpg">
+   </ion-card>
+   <h2>Course Name</h2>
+
+   <ion-slides [options]="slideOptions" pager="true" class="thumnail-slider">             
+    <ion-slide *ngFor="let courseImg of courseeData;let i = index">
+      <ion-card (click)="courseClick(courseImg.grade)" >
+          <img src={{courseImg.image}}>
+          <div class="myOverlay">
+            <div class="ellipsis">{{courseImg.title}}<br> {{courseImg.grade}}</div>
+           </div>                   
+      </ion-card>
+    </ion-slide>
+  </ion-slides> 
+</ion-grid>
+</ion-content>

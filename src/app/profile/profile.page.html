@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <div class="circleImg" slot="end" shape="circle" (click)="buttonClicked()">
+      <ion-label style="font-size: 16px;color: #FFFFFF;text-align: center;
+      font-family:Arboria-Bold !important;margin-top: 4px;position: absolute;">j</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="gridFull">
+    <h2>My Profile</h2>
+    <ion-row>
+      <ion-card class="cardCls">
+        <ion-row style="float: right;">
+          <img class="editImg" src="assets/edit.png" (click)="edit_flag = !edit_flag" *ngIf="edit_flag"/>
+        </ion-row>
+        <ion-col>
+          <ion-avatar class="proImg" [disabled]="edit_flag">
+            <img (click)="editImageClick()"  src={{pic_set}} />
+          </ion-avatar>
+          <!-- <h3>{{profile.name}}</h3> -->
+
+          <ion-input class="textclass" type="text" [disabled]="edit_flag" [(ngModel)]="name"></ion-input>
+
+          <h4 *ngFor="let profile of profileData;let i = index">{{profile.mobile_number}}</h4>
+          <!-- <h4>{{profile.email_id}}</h4> -->
+          <ion-row>
+
+            <ion-input class="textclass" type="text" [disabled]="edit_flag" [(ngModel)]="email"></ion-input>
+
+          </ion-row>
+
+        </ion-col>
+        <ion-row  [disabled]="edit_flag">
+          <h1 (click)="profileUpdate()" >SUBMIT</h1>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+
+
+  </ion-grid>
+</ion-content>

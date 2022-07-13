@@ -1,0 +1,63 @@
+
+.ion-color-medium { 
+  --ion-color-base: #FEE4C3 !important;
+  --ion-color-base-rgb: var(--ion-color-medium-rgb, 146, 148, 156) !important;
+  --ion-color-contrast: var(--ion-color-medium-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-medium-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: #FEE4C3 !important;
+  --ion-color-tint: #FEE4C3 !important;
+}
+.ion-color-submit { 
+  --ion-color-base: #D7B38C !important;
+  --ion-color-base-rgb: var(--ion-color-medium-rgb, 146, 148, 156) !important;
+  --ion-color-contrast: var(--ion-color-medium-contrast, #fff) !important;
+  --ion-color-contrast-rgb: var(--ion-color-medium-contrast-rgb, 255, 255, 255) !important;
+  --ion-color-shade: #D7B38C !important;
+  --ion-color-tint: #D7B38C !important;
+}
+
+
+h2 {
+  margin-top: 30px;
+  color: #000000;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 15px;
+  font-family:Arboria-Bold !important;
+}
+
+.gridFull{
+  background-color: #FDFDFD;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+h5{
+  font-family:Arboria-Bold !important;
+   font-size: 14px;
+   margin-left: 10px;
+}
+
+.imageAcc{
+  width: 24px;
+  height: 16px;
+  text-align: center;
+  margin: auto;
+  margin-top: 12px;
+  margin-right: 15px;
+}
+
+.circleImg {
+  background-color: #F89315;
+  border-radius: 50px;
+  text-align: center;
+  width: 30px;
+  color: #FFFFFF;
+  margin-right: 30px;
+  height: 30px;
+}
+
+
+
+

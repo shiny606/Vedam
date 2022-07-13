@@ -1,0 +1,97 @@
+<ion-header >
+  <ion-toolbar color="medium">
+    <div class="circleImg" slot="end" shape="circle" (click)="buttonClicked()">
+      <ion-label style="font-size: 16px;color: #FFFFFF;text-align: center;
+      font-family:Arboria-Bold !important;margin-top: 4px;position: absolute;">j</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-no-border">
+  <ion-grid class="textclass">
+    <ion-row class="borBack" (click)="profileClick()">
+      <ion-col size="2" style="text-align: center;">
+        <ion-img class="imageAcc" src="assets/user.png"></ion-img>
+      </ion-col>
+      <ion-col size="10">
+        <h5>My Profile</h5>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row class="borBack" (click)="verseClick()"> 
+      <ion-col size="2" style="text-align: center;">
+        <ion-img class="imageAcc" src="assets/music.png"></ion-img>
+      </ion-col>
+      <ion-col size="10">
+        <h5>Verse Of The Day</h5>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row class="borBack" (click)="dailyFactsClick()">
+      <ion-col size="2" style="text-align: center;">
+        <ion-img class="imageAcc" src="assets/iconNew.png"></ion-img>
+      </ion-col>
+      <ion-col size="10">
+        <h5>Daily Facts</h5>
+      </ion-col>
+   
+    </ion-row>
+    <ion-row class="borBack" (click)="notificationClick()">
+      <ion-col size="2" style="text-align: center;">
+        <ion-img class="imageAcc" src="assets/notification.png"></ion-img>
+      </ion-col>
+      <ion-col size="10">
+        <h5>Notification Settings</h5>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row class="borBack" (click)="savedClick()">
+      <ion-col size="2" style="text-align: center;">
+        <ion-img class="imageAcc" src="assets/bookmark.png"></ion-img>
+      </ion-col>
+      <ion-col size="10">
+        <h5 >Saved</h5>
+      </ion-col>
+      
+    </ion-row>
+    <ion-row class="borBack" (click)="contactusClick()">
+      <ion-col size="2" style="text-align: center;">
+        <ion-img class="imageAcc" src="assets/group.png"></ion-img>
+      </ion-col>
+      <ion-col size="10">
+        <h5 (click)="transactionDetails()">Contact Us</h5>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col size="10">
+        <h5 style="margin-top: 20px; font-size: 15px;" (click)="addCards()">Wallet</h5>
+      </ion-col>
+      <ion-col size="2">
+        <h5>
+          <ion-icon name="chevron-forward-outline" style="color: #f97012;
+      float: right;
+      font-weight: 600;
+      font-size: 16px;" (click)="addCards()"></ion-icon>
+        </h5>
+      </ion-col>
+    </ion-row> -->
+    <ion-row class="borBack" (click)="aboutusClick()">
+      <ion-col size="2" style="text-align: center;">
+        <ion-img class="imageAcc" src="assets/information.png"></ion-img>
+      </ion-col>
+      <ion-col size="10">
+        <h5 (click)="helpClick()">About Us</h5>
+      </ion-col>
+    
+    </ion-row>
+<!-- 
+    <ion-row class="borBack">
+      <ion-col size="2" style="text-align: center;">
+        <ion-img class="imageAcc" src="assets/customer.png"></ion-img>
+      </ion-col>
+      <ion-col size="10">
+        <h5 (click)="contactUs()">Help</h5>
+      </ion-col>
+    </ion-row> -->
+
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-content class="ion-padding">
+  <form #loginForm="ngForm" novalidate>
+    <img style="height: 24px;  width: auto;
+    margin: auto;
+    display: block;margin-top: 111px;"  src="assets/vedamText.png" >
+    <h2>Welcome back, please enter<br>
+    your details</h2>
+    <ion-list lines="none" style="margin-top: 45px;">
+      <ion-label>Phone number</ion-label>
+      <!-- <ion-text color="danger" style="float: right;">
+        <p [hidden]="full_name.valid || submitted == false" class="ion-padding-start">
+          {{Name is required}}
+        </p>
+      </ion-text> -->
+      <ion-item lines="none">
+        <ion-input  type="text" 
+          name="full_name"  spellcheck="false" autocapitalize="off" required>
+        </ion-input>
+      </ion-item>
+     
+      <ion-label>Password</ion-label>
+      <!-- <ion-text color="danger" style="float: right;">
+        <p [hidden]="password.valid || submitted == false || passwordInvalid == true" class="ion-padding-start">
+          {{Use a valid password}}
+        </p>
+      </ion-text> -->
+      <ion-item lines="none">
+        <ion-input  name="password" 
+          type="password"  required [type]="showPassword ? 'text' : 'password'" clearOnEdit="false">
+        </ion-input>
+        <!-- <ion-icon slot="end" [name]="showPassword ? 'eye-off' : 'eye'" (click)="onPasswordToggle()"></ion-icon> -->
+      </ion-item>
+      <p class="frgTag" (click)="forgotPass()"><b>Forgot password?</b></p>
+    </ion-list>
+    <div class="row" >
+      <div class="col text-center"  class="btn_class" >
+        <ion-button color="medium" style="text-transform: none;width: 150px;height: 50px;font-size: 18px;
+        color: #FFFFFF;font-family:Arboria-Bold !important;" (click)="onLogin()" type="submit">
+          Sign In
+          <!-- <span *ngIf="!isLogin"> Register Now</span> -->
+          <!-- <ion-spinner name="circles" *ngIf="isLogin"></ion-spinner> -->
+        </ion-button>
+      </div>
+    </div>
+
+    <p class="createAcc" (click)="register()">Don't have an account?
+      <span class="registerTag"><u>Sign Up</u></span>
+    </p>
+  </form>
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header >
+  <ion-toolbar color="medium">
+    <div class="circleImg" slot="end" shape="circle" (click)="buttonClicked()">
+      <ion-label style="font-size: 16px;color: #FFFFFF;text-align: center;
+      font-family:Arboria-Bold !important;margin-top: 4px;position: absolute;">j</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="gridFull">
+  <h2>Explore</h2>
+  <ion-row style="margin-left: 5px;"> 
+    <ion-card class="exImage" *ngFor="let exploreImg of exploreData;let i = index">
+    <ion-col size="4" (click)="ScienceClick(exploreImg.explore_category)">
+    <div style="display: flex">
+    <ion-avatar  class="user_img" >
+    <ion-img src={{exploreImg.image}}></ion-img>
+    </ion-avatar>
+    </div>
+    <div style="display: flex">
+    <ion-label class="textxx">{{exploreImg.explore_category}}</ion-label>
+    </div>
+    </ion-col>
+  </ion-card>
+  </ion-row>
+</ion-grid>
+</ion-content>

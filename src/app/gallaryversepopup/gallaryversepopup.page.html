@@ -1,0 +1,32 @@
+<div style="text-align: center;">
+  <div  color="none" style="text-align: center;height: 7%;;">
+  <img class="closeImg" src="assets/close.png"  (click)="closeClick()"/>
+  </div>
+<ion-row style="text-align: center;background-color: #F5F5F5;width: 100%;height:93%;">
+
+  <ion-row>
+    <!-- <ion-col size="2">
+      <div >
+        <ion-icon style="color: #e40d0d;margin-top: 100px;" name="chevron-back-outline" (click)="left()"></ion-icon>
+      </div>
+    </ion-col> -->
+    <ion-col size="12">
+      <div class="img-container">
+      <ion-slides [options]="sliderOpts" >
+        <ion-slide *ngFor="let galImg of img;">
+          <div class="swiper-zoom-container">
+            <img  class="img-to-fit" src={{galImg.data}}>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    </ion-col>
+    <!-- <ion-col size="2">
+      <div >
+        <ion-icon style="color: #e40d0d;margin-top: 100px;" name="chevron-forward-outline" (click)="right()"></ion-icon>
+      </div>
+    </ion-col> -->
+  </ion-row>
+<!-- <img class="sryImg" src="assets/verse.png"/> -->
+</ion-row>  
+</div>

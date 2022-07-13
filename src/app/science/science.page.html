@@ -1,0 +1,27 @@
+<ion-header >
+
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-img class="backImg" src="assets/back.png"></ion-img>
+      </ion-button>
+    </ion-buttons>
+    <h2>{{category}}</h2>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="gridFull" >
+    <ion-card *ngFor="let explData of exploreData;let i = index" style="border-radius: 10px;" (click)="topicClick(explData.topic)">  
+      <img class="verse"  src={{explData.topic_banner_image}}>
+     <div class="myOverlay">
+      <div class="ellipsis">{{explData.topic}}</div>
+     </div>
+   </ion-card>
+   <!-- <ion-card style="border-radius: 10px;">  
+    <img class="verse"  src="assets/dummy_rest.jpg">
+   <div class="myOverlay">
+    <div class="ellipsis">Topic 2</div>
+   </div>
+ </ion-card> -->
+</ion-grid>
+</ion-content>

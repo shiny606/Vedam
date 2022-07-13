@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "789019105828",
+    "project_id": "vedam-541a1",
+    "storage_bucket": "vedam-541a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789019105828:android:ba28f5ab86677d6f1f96b1",
+        "android_client_info": {
+          "package_name": "com.ionic.Vedam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789019105828-987kc7f7ljcoa9ud0gi07njkmo1rnao3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLaO4aOgtooYFnlj_JpMRXqkSSzxJGu3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789019105828-987kc7f7ljcoa9ud0gi07njkmo1rnao3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,113 @@
+<ion-header >
+
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-img class="backImg" src="assets/back.png"></ion-img>
+      </ion-button>
+    </ion-buttons>
+    <h2>Courses</h2>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="gridFull">
+    <div style="margin-left: 5px;margin-right: 5px;">
+    <ion-card style="border-radius: 10px;background-color: #707070;" *ngFor="let topicDeta of topicData;let i = index">  
+      <img class="verse"  src={{topicDeta.topic_image}}>
+   </ion-card>
+   <h3 *ngFor="let topicDeta of topicData;let i = index">{{topicDeta.topics}}</h3>
+   <!-- <h1><u>Videos</u></h1> -->
+   <ion-row>
+   <ion-segment scrollable [(ngModel)]="txtDefault">
+    <ion-segment-button  value="Videos" (click)="segmentChanged(1)">
+      <ion-label class="txtLabel"> Videos </ion-label>
+    </ion-segment-button>
+    <ion-segment-button  value="Audios" (click)="segmentChanged(2)">
+      <ion-label class="txtLabel"> Audios </ion-label>
+    </ion-segment-button>
+    <ion-segment-button  value="PDF" (click)="segmentChanged(3)">
+      <ion-label class="txtLabel"> PDF </ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  </ion-row>
+  <div *ngIf="seg_id == 1">
+  <ion-row *ngFor="let topicViDeta of topicVideoData;let i = index">
+    <ion-col size="1">
+      <h5>{{topicViDeta.count}} . </h5>
+    </ion-col>
+    <ion-col size="10">
+      <h5>Video Topic</h5>
+    </ion-col>
+    <ion-col size="1" style="text-align: right;">
+      <ion-img class="imageAcc" src="assets/play.png" (click)="coursevideopopup(topicViDeta.topic_video)"></ion-img>
+    </ion-col>
+  </ion-row>
+
+  <!-- <ion-row>
+    <ion-col size="1">
+      <h5>2 . </h5>
+    </ion-col>
+    <ion-col size="10">
+      <h5>Video Topic</h5>
+    </ion-col>
+    <ion-col size="1" style="text-align: right;">
+      <ion-img class="imageAcc" src="assets/play.png"></ion-img>
+    </ion-col>
+  </ion-row> -->
+</div>
+
+<div *ngIf="seg_id == 2">
+
+
+  <ion-row *ngFor="let topicAudio of topicAudioData;let i = index">
+    <ion-col size="1">
+      <h5>{{topicAudio.count}} . </h5>
+    </ion-col>
+    <ion-col size="10">
+      <h5>Audio Name</h5>
+    </ion-col>
+    <ion-col size="1" style="text-align: right;">
+      <ion-img class="imageAcc1" src="assets/speaker.png" (click)="playAudio(topicAudio.topic_audio)"></ion-img>
+    </ion-col>
+  </ion-row>
+  <!-- <ion-row *ngFor="let topicAudio of topicAudioData;let i = index">
+    <ion-col size="1">
+      <h5>{{topicAudio.count}} . </h5>
+    </ion-col>
+    <ion-col size="10">
+      <h5>Audio Name</h5>
+    </ion-col>
+    <ion-col size="1" style="text-align: right;">
+      <ion-img class="imageAcc1" src="assets/speaker.png" (click)="playAudio(topicAudio.topic_audio)"></ion-img>
+    </ion-col>
+  </ion-row> -->
+
+</div>
+
+<div *ngIf="seg_id == 3">
+  <ion-row *ngFor="let topicPdf of topicPdfData;let i = index">
+    <ion-col size="1">
+      <h5>{{topicPdf.count}} . </h5>
+    </ion-col>
+    <ion-col size="10">
+      <h5>PDF Name</h5>
+    </ion-col>
+    <ion-col size="1" style="text-align: right;">
+      <ion-img class="imageAcc2" src="assets/view.png" href="javascript:void(0)" (click)="download(topicPdf.topic_pdf)"></ion-img>
+    </ion-col>
+  </ion-row>
+  <!-- <div>
+    <div color="primary">
+       <ion-range min="0" color="light"  (ionFocus)="onSeekStart()" (ionBlur)="onSeekEnd($event)"
+         name="seekbar">
+         <ion-label style="color: #000000" range-left>0</ion-label>
+         <ion-label  style="color: #000000" range-right>5000</ion-label>
+       </ion-range>
+      </div>
+    </div> -->
+</div>
+  </div>
+</ion-grid>
+</ion-content>
+
+

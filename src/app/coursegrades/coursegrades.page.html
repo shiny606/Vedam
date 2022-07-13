@@ -1,0 +1,40 @@
+<ion-header >
+
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-img class="backImg" src="assets/back.png"></ion-img>
+      </ion-button>
+    </ion-buttons>
+    <h2>Courses</h2>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="gridFull">
+    <div style="margin-left: 5px;margin-right: 5px;" >
+    <ion-card style="border-radius: 10px;background-color: #707070;" >  
+      <img class="verse"  src={{gradeImage}}>
+   </ion-card>
+   <h3>{{gradeName}}</h3>
+   <!-- <h4>2 Terms</h4> -->
+  <ion-row>
+    <ion-col size="6" *ngFor="let gradeItem of gradeData;let i = index">
+      <ion-card style="border-radius: 5px;background-color: #707070;" (click)="courseGradeClick(gradeItem.grade,gradeItem.term_type)">  
+        <img class="course"  src={{gradeItem.term_image}}>
+        <div class="myOverlay">
+          <div class="ellipsis">{{gradeItem.grade}}<br> {{gradeItem.term_type}}</div>
+         </div> 
+     </ion-card>
+    </ion-col>
+    <!-- <ion-col size="6">
+      <ion-card style="border-radius: 5px;background-color: #707070;" (click)="courseGradeClick()">  
+        <img class="course"  src="assets/course.png">
+        <div class="myOverlay">
+          <div class="ellipsis">Term 2<br> 10 Topics</div>
+         </div> 
+     </ion-card>
+    </ion-col> -->
+  </ion-row>
+  </div>
+</ion-grid>
+</ion-content>

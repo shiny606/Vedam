@@ -1,0 +1,80 @@
+<ion-content class="ion-padding">
+  <form #loginForm="ngForm" novalidate>
+    <img style="height: 24px;  width: auto;
+    margin: auto;
+    display: block;margin-top: 111px;"  src="assets/vedamText.png" >
+    <h2>Enter the One Time Password<br>
+    received in your mail</h2>
+
+    <ion-grid style="margin-top: 90px;">
+      <ion-row class="otp-box">
+        <ion-col>
+          <div>
+            <ion-input name="a" #a (keyup)="moveFocus($event,b,'')" type="tel" maxlength="1">
+            </ion-input>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <ion-input name="b" #b (keyup)="moveFocus($event,c,a)" type="tel"  maxlength="1">
+            </ion-input>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <ion-input name="c" #c (keyup)="moveFocus($event,d,b)" type="tel"  maxlength="1">
+            </ion-input>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <ion-input name="d" #d (keyup)="moveFocus($event,e,c)" type="tel"  maxlength="1">
+            </ion-input>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <ion-input name="e" #e (keyup)="moveFocus($event,f,d)" type="tel"  maxlength="1">
+            </ion-input>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <ion-input name="f" #f (keyup)="moveFocus($event,'',e)" type="tel"  maxlength="1">
+            </ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!-- <ion-row style="text-align: center;">
+     
+       <ion-input  class="x" #otp1 required="true" maxLength="1"  (keyup)="otpController($event,otp2,'')">
+       </ion-input>
+       <ion-input class="x" #otp2 required="true" maxLength="1"  (keyup)="otpController($event,otp3,otp1)">
+       </ion-input>
+       <ion-input class="x" #otp3 required="true" maxLength="1"   (keyup)="otpController($event,otp4,otp2)">
+       </ion-input>
+  
+       <ion-input class="x" #otp4 required="true" maxLength="1" (keyup)="otpController($event,otp5,otp3)">
+      </ion-input>
+  
+      <ion-input class="x" #otp5  required="true" maxLength="1"  (keyup)="otpController($event,otp6,otp4)">
+      </ion-input>
+  
+      <ion-input class="x" #otp6  required="true" maxLength="1"  (keyup)="otpController($event,'',otp5)">
+      </ion-input>
+  
+   
+    </ion-row> -->
+    <div class="row" >
+      <div class="col text-center"  class="btn_class" >
+        <ion-button color="medium" style="text-transform: none;width: 168px;height: 50px;font-size: 18px;
+        color: #FFFFFF;font-family:Arboria-Bold !important;margin-top: 180px;" (click)="resetPassword()" type="submit">
+         Reset Now
+          <!-- <span *ngIf="!isLogin"> Register Now</span> -->
+          <!-- <ion-spinner name="circles" *ngIf="isLogin"></ion-spinner> -->
+        </ion-button>
+      </div>
+    </div>
+  </form>
+</ion-content>

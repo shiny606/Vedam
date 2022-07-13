@@ -1,0 +1,23 @@
+<ion-header >
+  <ion-toolbar color="medium">
+    <div class="circleImg" slot="end" shape="circle" (click)="buttonClicked()">
+      <ion-label style="font-size: 16px;color: #FFFFFF;text-align: center;
+      font-family:Arboria-Bold !important;margin-top: 4px;position: absolute;">j</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<div style="margin-left: 5px;margin-right: 5px;">
+<h2>Facts</h2>
+
+<ion-row style="margin: auto;text-align: center;margin-top: 20px;" > 
+  <ion-col size="4" *ngFor="let galImg of galImageData;let i = index">
+  <ion-img class="verImage" src={{galImg.data}} (click)="openViewers(galImageData,i)"></ion-img>
+  </ion-col>
+  
+  </ion-row>
+</div>
+
+
+
+</ion-content>

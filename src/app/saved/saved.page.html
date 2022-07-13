@@ -1,0 +1,44 @@
+<ion-header >
+  <ion-toolbar color="medium">
+    <div class="circleImg" slot="end" shape="circle" (click)="buttonClicked()">
+      <ion-label style="font-size: 16px;color: #FFFFFF;text-align: center;
+      font-family:Arboria-Bold !important;margin-top: 4px;position: absolute;">j</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<div style="margin-left: 5px;margin-right: 5px;">
+<h2>Saved</h2>
+<h2>Verses</h2>
+<div *ngFor="let verseSaved of versesData;let i = index">
+
+<ion-card style="border-radius: 5px;background-color: #FFFFFF;margin-top: 20px;">  
+  <img class="verse" src={{verseSaved.data}}/>
+</ion-card>
+</div>
+<h2>Facts</h2>
+<div *ngFor="let factsSaved of factsData;let i = index">
+  
+  <ion-card style="border-radius: 5px;background-color: #FFFFFF;margin-top: 20px;">  
+    <img class="verse" src={{factsSaved.data}}/>
+  </ion-card>
+  </div>
+  <h2>Explore</h2>
+  <div style="margin: 10px;">
+    <ion-row *ngFor="let exploreViDeta of exploreData;let i = index">
+      <ion-col size="1">
+        <h5>{{exploreViDeta.count}} . </h5>
+      </ion-col>
+      <ion-col size="10">
+        <h5>{{exploreViDeta.video}}</h5>
+      </ion-col>
+      <ion-col size="1" style="text-align: right;">
+        <ion-img class="imageAcc" src="assets/play.png" (click)="savedvideopopup(exploreViDeta.data)"></ion-img>
+      </ion-col>
+    </ion-row>
+  <!-- <div class="o-video">
+    <iframe allowfullscreen [src]=getInnerHTMLValue()></iframe>
+    </div> -->
+  </div>
+</div>
+</ion-content>

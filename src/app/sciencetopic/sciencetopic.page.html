@@ -1,0 +1,44 @@
+<ion-header >
+
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-img class="backImg" src="assets/back.png"></ion-img>
+      </ion-button>
+    </ion-buttons>
+    <h2>{{categoryTopic}}</h2>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="gridFull">
+    <h3>{{cateTopicName}}</h3>
+    <ion-card style="border-radius: 5px;background-color: #707070;">  
+      <img class="verse"  src={{topic_video_banner_image}}>
+   </ion-card>
+   <h1><u>Videos</u></h1>
+
+   <ion-row *ngFor="let cateTopic of cateTopicData;let i = index">
+    <ion-col size="1">
+      <h5>{{cateTopic.count}} . </h5>
+    </ion-col>
+    <ion-col size="10">
+      <h5>Video Topic</h5>
+    </ion-col>
+    <ion-col size="1" style="text-align: right;">
+      <ion-img class="imageAcc" src="assets/play.png" (click)="videopopup(cateTopic.topic_video,cateTopic.video_image)"></ion-img>
+    </ion-col>
+  </ion-row>
+
+  <!-- <ion-row>
+    <ion-col size="1">
+      <h5>2 . </h5>
+    </ion-col>
+    <ion-col size="10">
+      <h5>Video Topic</h5>
+    </ion-col>
+    <ion-col size="1" style="text-align: right;">
+      <ion-img class="imageAcc" src="assets/play.png"></ion-img>
+    </ion-col>
+  </ion-row> -->
+</ion-grid>
+</ion-content>

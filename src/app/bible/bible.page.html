@@ -1,0 +1,101 @@
+<ion-header >
+
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-img class="backImg" src="assets/back.png"></ion-img>
+      </ion-button>
+    </ion-buttons>
+    <h2>Reference</h2>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="segment_div">
+    <ion-label [class.active]="seg_id == 1" (click)="onClick(1)">BOOKS</ion-label>
+    <ion-label [class.active]="seg_id == 2" (click)="onClick(2)">CHAPTERS</ion-label>
+    <ion-label [class.active]="seg_id == 3" (click)="onClick(3)">VERSES</ion-label>
+  </div>
+<ion-grid class="gridFull" >
+  <span *ngFor="let bibleBook of bibleBooksData;let i = index">
+  <div *ngIf="seg_id == 1" >
+    <h1 class="labBook" (click)="bibleBookClick(bibleBook.books)">{{bibleBook.books}}</h1>
+    <!-- <ion-fab  vertical="bottom" horizontal="end" slot="fixed" (click)="bibleRead()">
+      <ion-fab-button color="tick" style="width: 60px;height:60px;">
+        <ion-icon style="width: 38px;height:30px;color: #FFFFFF;" name="checkmark-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab> -->
+  </div>
+</span>
+  <div *ngIf="seg_id == 2">
+    <ion-row style="padding: 20px;text-align: center;" > 
+      <ion-col  size="4" style="padding: 20px;" *ngFor="let bibleChapter of bibleChaptersData;let i = index">
+        <div class="circleImg" shape="circle" [class.actives]="chapterNo == bibleChapter.chapters" (click)="buttonChapterClicked(bibleChapter.chapters)">
+          <ion-label class="circleTxt">{{bibleChapter.chapters}}</ion-label>
+        </div>
+        </ion-col>
+        <!-- <ion-col  size="4" style="padding: 20px;">
+        <div class="circleImg"  shape="circle" [class.actives]="id == 2" (click)="buttonClicked(2)">
+          <ion-label class="circleTxt">2</ion-label>
+        </div>
+        </ion-col>
+        <ion-col  size="4" style="padding: 20px;">
+        <div class="circleImg"  shape="circle" [class.actives]="id == 3" (click)="buttonClicked(3)">
+          <ion-label class="circleTxt">3</ion-label>
+        </div>
+        </ion-col>
+        <ion-col  size="4" style="padding: 20px;">
+        <div class="circleImg"  shape="circle" [class.actives]="id == 4" (click)="buttonClicked(4)">
+          <ion-label class="circleTxt">4</ion-label>
+        </div>
+     </ion-col>
+     <ion-col  size="4" style="padding: 20px;">
+      <div class="circleImg"  shape="circle" [class.actives]="id == 5" (click)="buttonClicked(5)">
+        <ion-label class="circleTxt">5</ion-label>
+      </div>
+   </ion-col> -->
+    </ion-row>
+
+    <!-- <ion-fab  vertical="bottom" horizontal="end" slot="fixed" (click)="bibleRead()">
+      <ion-fab-button color="tick" style="width: 60px;height:60px;">
+        <ion-icon style="width: 38px;height:30px;color: #FFFFFF;" name="checkmark-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab> -->
+  </div>
+
+  <div *ngIf="seg_id == 3">
+    <ion-row style="text-align: center;margin-bottom: 20px;margin-top: 20px;margin: auto;padding: 20px;"> 
+      <ion-col  size="4" style="padding: 20px;" *ngFor="let bibleVerses of bibleVersesData;let i = index">
+        <div class="circleImg" shape="circle" [class.actives3]="versesNo == bibleVerses.verses_no" (click)="buttonVersesClicked(bibleVerses.verses_no)">
+          <ion-label  class="circleTxt">{{bibleVerses.verses_no}}</ion-label>
+        </div>
+        </ion-col>
+        <!-- <ion-col  size="4" style="padding: 20px;">
+        <div class="circleImg"  shape="circle" [class.actives3]="id3 == 2" (click)="buttonClicked3(2)">
+          <ion-label class="circleTxt">2</ion-label>
+        </div>
+        </ion-col>
+        <ion-col  size="4" style="padding: 20px;">
+        <div class="circleImg"  shape="circle" [class.actives3]="id3 == 3" (click)="buttonClicked3(3)">
+          <ion-label class="circleTxt">3</ion-label>
+        </div>
+        </ion-col>
+        <ion-col  size="4" style="padding: 20px;">
+        <div class="circleImg"  shape="circle" [class.actives3]="id3 == 4" (click)="buttonClicked3(4)">
+          <ion-label class="circleTxt">4</ion-label>
+        </div>
+     </ion-col>
+     <ion-col  size="4" style="padding: 20px;">
+      <div class="circleImg"  shape="circle" [class.actives3]="id3 == 5" (click)="buttonClicked3(5)">
+        <ion-label class="circleTxt">5</ion-label>
+      </div>
+   </ion-col> -->
+    </ion-row>
+    <!-- <ion-fab  vertical="bottom" horizontal="end" slot="fixed" (click)="bibleRead()">
+      <ion-fab-button color="tick" style="width: 60px;height:60px;">
+        <ion-icon style="width: 38px;height:30px;color: #FFFFFF;" name="checkmark-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab> -->
+  </div>
+  
+</ion-grid>
+</ion-content>

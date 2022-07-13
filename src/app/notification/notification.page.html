@@ -1,0 +1,47 @@
+<ion-header >
+  <ion-toolbar color="medium">
+    <div class="circleImg" slot="end" shape="circle" (click)="buttonClicked()">
+      <ion-label style="font-size: 16px;color: #FFFFFF;text-align: center;
+      font-family:Arboria-Bold !important;margin-top: 4px;position: absolute;">j</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="gridFull">
+  <h2>Notification Settings</h2>
+  <ion-row style="margin-top: 20px;" >
+    <ion-col size="10">
+      <h5 >Blessing Verse</h5>
+    </ion-col>
+    <ion-col *ngIf="settings=='on'" size="2" style="text-align: center;" (click)="settingsClick('off')">
+      <ion-img class="imageAcc" src="assets/on.png"></ion-img>
+    </ion-col>
+    <ion-col *ngIf="settings=='off'" size="2" style="text-align: center;" (click)="settingsClick('on')">
+      <ion-img class="imageAcc" src="assets/off.png"></ion-img>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col size="10">
+      <h5 >Daily Facts</h5>
+    </ion-col>
+    <ion-col *ngIf="settings1=='on'" size="2" style="text-align: center;" (click)="settingsClick1('off')">
+      <ion-img class="imageAcc" src="assets/on.png"></ion-img>
+    </ion-col>
+    <ion-col *ngIf="settings1=='off'" size="2" style="text-align: center;" (click)="settingsClick1('on')">
+      <ion-img class="imageAcc" src="assets/off.png"></ion-img>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col size="10">
+      <h5 >Explore</h5>
+    </ion-col>
+    <ion-col *ngIf="settings2=='on'" size="2" style="text-align: center;" (click)="settingsClick2('off')">
+      <ion-img class="imageAcc" src="assets/on.png"></ion-img>
+    </ion-col>
+    <ion-col *ngIf="settings2=='off'" size="2" style="text-align: center;" (click)="settingsClick2('on')">
+      <ion-img class="imageAcc" src="assets/off.png"></ion-img>
+    </ion-col>
+  </ion-row>
+ 
+  </ion-grid>
+</ion-content>
